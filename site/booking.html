@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your stay at Château d'Hiver. Reserve your luxury Alpine retreat with our simple booking form.">
+  <title>Book Your Stay | Château d'Hiver</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="snowflake.png">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Château <span>d'Hiver</span></a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="spa.html">Spa</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero page-hero">
+    <div class="hero-bg" style="background-image: url('chateau.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Reservations</p>
+      <h1 class="hero-title">Book Your Stay</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="booking-steps">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <span>Dates & Room</span>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <span>Guest Details</span>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+
+      <form id="booking-form">
+        <div class="booking-form-step active">
+          <div class="section-header">
+            <h2 class="section-title">Select Your Dates</h2>
+            <div class="section-divider"></div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="check-in">Check-In Date *</label>
+              <input type="date" id="check-in" name="check-in" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="check-out">Check-Out Date *</label>
+              <input type="date" id="check-out" name="check-out" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="room-type">Room Type *</label>
+              <select id="room-type" name="room-type" class="form-select" required>
+                <option value="">Select a room</option>
+                <option value="deluxe" data-base-price="450">Deluxe Room - €450/night</option>
+                <option value="superior" data-base-price="750">Superior Suite - €750/night</option>
+                <option value="grand" data-base-price="1200">Grand Suite - €1,200/night</option>
+                <option value="royal" data-base-price="2500">Royal Suite - €2,500/night</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guests">Number of Guests *</label>
+              <select id="guests" name="guests" class="form-select" required>
+                <option value="">Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="special-requests">Special Requests</label>
+            <textarea id="special-requests" name="special-requests" class="form-textarea" placeholder="Any special requirements or preferences..."></textarea>
+          </div>
+
+          <div class="price-display" id="price-display" style="display: none;">
+            <h4 style="color: var(--gold); margin-bottom: 0.5rem;">Estimated Price</h4>
+            <p id="price-breakdown"></p>
+            <p style="font-size: 1.5rem; color: var(--gold); font-weight: bold;">Total: €<span id="base-total">0</span></p>
+          </div>
+          
+          <button type="button" class="btn btn-gold btn-next">Continue to Guest Details</button>
+        </div>
+
+        <div class="booking-form-step">
+          <div class="section-header">
+            <h2 class="section-title">Guest Information</h2>
+            <div class="section-divider"></div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first-name" class="form-input" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="last-name" class="form-input" required placeholder="Smith">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="guest-email">Email Address *</label>
+              <input type="email" id="guest-email" name="guest-email" class="form-input" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guest-phone">Phone Number *</label>
+              <input type="tel" id="guest-phone" name="guest-phone" class="form-input" required placeholder="+1 234 567 8900">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="country">Country *</label>
+            <select id="country" name="country" class="form-select" required>
+              <option value="">Select your country</option>
+              <option value="FR">France</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="DE">Germany</option>
+              <option value="CH">Switzerland</option>
+              <option value="IT">Italy</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <button type="button" class="btn btn-outline btn-prev">Back</button>
+            <button type="button" class="btn btn-gold btn-next">Review Booking</button>
+          </div>
+        </div>
+
+        <div class="booking-form-step">
+          <div class="section-header">
+            <h2 class="section-title">Confirm Your Reservation</h2>
+            <div class="section-divider"></div>
+          </div>
+          
+          <div class="booking-summary">
+            <h3 style="color: var(--cream); margin-bottom: 1.5rem;">Booking Summary</h3>
+            <div class="summary-row">
+              <span>Dates</span>
+              <span id="summary-dates">-</span>
+            </div>
+            <div class="summary-row">
+              <span>Room Type</span>
+              <span id="summary-room">-</span>
+            </div>
+            <div class="summary-row">
+              <span>Guests</span>
+              <span id="summary-guests">-</span>
+            </div>
+            <div class="summary-row">
+              <span>Nights</span>
+              <span id="summary-nights">-</span>
+            </div>
+            <div class="summary-row" id="summary-activities-row" style="display: none; gap: 15px;">
+              <span>Activities:</span>
+              <span id="summary-activities" style="text-align: right;"> - </span>
+            </div>
+            <div class="summary-row" style="border-top: 1px solid var(--gold); padding-top: 1rem; margin-top: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: bold;">Total Price</span>
+              <span id="summary-total" style="font-size: 1.2rem; color: var(--gold); font-weight: bold;">€0</span>
+            </div>
+          </div>
+          
+          <p style="margin: 2rem 0; font-size: 0.9rem;">By completing this reservation, you agree to our terms and conditions. A member of our reservations team will contact you within 24 hours to confirm availability and process payment.</p>
+          
+          <div style="display: flex; gap: 1rem;">
+            <button type="button" class="btn btn-outline btn-prev">Back</button>
+            <button type="submit" class="btn btn-gold">Complete Reservation</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Château <span>d'Hiver</span></div>
+          <p class="footer-description">A sanctuary of luxury in the heart of the Alps, where timeless elegance meets alpine grandeur.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rooms.html">Accommodations</a></li>
+            <li><a href="dining.html">Restaurants</a></li>
+            <li><a href="spa.html">Spa & Wellness</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Experiences</h4>
+          <ul class="footer-links">
+            <li><a href="activities.html">Winter Activities</a></li>
+            <li><a href="events.html">Private Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>1847 Alpine Heights Road</li>
+            <li>Chamonix, French Alps</li>
+            <li>+33 4 50 XX XX XX</li>
+            <li>reservations@chateaudhiver.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Château d'Hiver. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

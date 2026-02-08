@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the stunning visuals of Château d'Hiver through our gallery. See our rooms, dining, spa, and breathtaking Alpine surroundings.">
+  <title>Gallery | Château d'Hiver</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="snowflake.png">
+
+</head>
+<body>
+    <div class="snow-container"></div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Château <span>d'Hiver</span></a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="spa.html">Spa</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero page-hero">
+    <div class="hero-bg" style="background-image: url('chateau.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Visual Journey</p>
+      <h1 class="hero-title">Gallery</h1>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="exterior">Exterior</button>
+    <button class="filter-btn" data-category="rooms">Rooms</button>
+    <button class="filter-btn" data-category="dining">Dining</button>
+    <button class="filter-btn" data-category="spa">Spa</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="exterior">
+          <img src="chateau.jpg" alt="Château at Twilight">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Exterior</p>
+              <p class="gallery-item-title">Château at Twilight</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="rooms">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Royal Suite">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Rooms</p>
+              <p class="gallery-item-title">Royal Suite</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="dining">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Le Sommet Restaurant">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Dining</p>
+              <p class="gallery-item-title">Le Sommet Restaurant</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="spa">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="Alpine Spa Pool">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Spa</p>
+              <p class="gallery-item-title">Alpine Spa Pool</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="exterior">
+          <img src="interior.jpg" alt="Winter Gardens">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Exterior</p>
+              <p class="gallery-item-title">Winter Gardens</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="rooms">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Deluxe Suite">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Rooms</p>
+              <p class="gallery-item-title">Deluxe Suite</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="dining">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80" alt="The Glacier Bar">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Dining</p>
+              <p class="gallery-item-title">The Glacier Bar</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="spa">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Treatment Room">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-info">
+              <p class="gallery-item-category">Spa</p>
+              <p class="gallery-item-title">Treatment Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <img src="" alt="Gallery Image">
+    <button class="lightbox-close">✕</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Château <span>d'Hiver</span></div>
+          <p class="footer-description">A sanctuary of luxury in the heart of the Alps, where timeless elegance meets alpine grandeur.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rooms.html">Accommodations</a></li>
+            <li><a href="dining.html">Restaurants</a></li>
+            <li><a href="spa.html">Spa & Wellness</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Experiences</h4>
+          <ul class="footer-links">
+            <li><a href="activities.html">Winter Activities</a></li>
+            <li><a href="events.html">Private Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>1847 Alpine Heights Road</li>
+            <li>Chamonix, French Alps</li>
+            <li>+33 4 50 XX XX XX</li>
+            <li>reservations@chateaudhiver.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Château d'Hiver. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
